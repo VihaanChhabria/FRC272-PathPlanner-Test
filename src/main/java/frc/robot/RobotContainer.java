@@ -46,7 +46,7 @@ public class RobotContainer {
 
     autoChooser.setDefaultOption(
       "ExampleAuto",
-      new InstantCommand(() -> s_Swerve.setPose(new Pose2d()))
+      new InstantCommand(() -> s_Swerve.setPose(new Pose2d(2.00, 7.00, new Rotation2d(Units.degreesToRadians(0)))))
         .andThen(new PathPlannerAuto("ExampleAuto"))
     );
 

@@ -62,8 +62,6 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousInit() {
 
-    m_robotContainer.s_Swerve.setPose(new Pose2d(2.00, 7.00, new Rotation2d(Units.degreesToRadians(0))));
-
     m_autonomousCommand = m_robotContainer.getAutonomousCommand();
 
     // schedule the autonomous command (example)
