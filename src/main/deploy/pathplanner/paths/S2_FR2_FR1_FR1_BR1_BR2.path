@@ -1,0 +1,419 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 1.36,
+        "y": 5.54
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 1.4600000000000002,
+        "y": 5.54
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.5362823244730466,
+        "y": 5.525086266457521
+      },
+      "prevControl": {
+        "x": 2.4362823244730465,
+        "y": 5.525086266457521
+      },
+      "nextControl": {
+        "x": 2.636282324473047,
+        "y": 5.525086266457521
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 1.3665098068109631,
+        "y": 5.525086266457521
+      },
+      "prevControl": {
+        "x": 1.2665098068109633,
+        "y": 5.525086266457521
+      },
+      "nextControl": {
+        "x": 1.466509806810963,
+        "y": 5.525086266457521
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 2.5571711194312976,
+        "y": 6.976857516056
+      },
+      "prevControl": {
+        "x": 2.4571711194312975,
+        "y": 6.976857516056
+      },
+      "nextControl": {
+        "x": 2.6571711194312977,
+        "y": 6.976857516056
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 1.3142878194153342,
+        "y": 5.566863856374023
+      },
+      "prevControl": {
+        "x": 1.2142878194153341,
+        "y": 5.566863856374023
+      },
+      "nextControl": {
+        "x": 1.4142878194153343,
+        "y": 5.566863856374023
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 1.3456210118527112,
+        "y": 5.535530663936646
+      },
+      "prevControl": {
+        "x": 1.2456210118527113,
+        "y": 5.535530663936646
+      },
+      "nextControl": {
+        "x": 1.4456210118527115,
+        "y": 5.535530663936646
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 7.873369436306303,
+        "y": 7.436411005137533
+      },
+      "prevControl": {
+        "x": 7.773369436306303,
+        "y": 7.436411005137533
+      },
+      "nextControl": {
+        "x": 7.973369436306304,
+        "y": 7.436411005137533
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 1.3247322168944597,
+        "y": 5.566863856374023
+      },
+      "prevControl": {
+        "x": 1.420998752606279,
+        "y": 5.593933287510362
+      },
+      "nextControl": {
+        "x": 1.2284656811826404,
+        "y": 5.539794425237684
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 7.079595227892747,
+        "y": 6.726191976556981
+      },
+      "prevControl": {
+        "x": 6.9838269580632915,
+        "y": 6.697409369067863
+      },
+      "nextControl": {
+        "x": 7.175363497722202,
+        "y": 6.754974584046099
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 7.8315918463897995,
+        "y": 5.786196203435664
+      },
+      "prevControl": {
+        "x": 7.75484889966129,
+        "y": 5.85030954157544
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "ShootRing0",
+      "waypointRelativePos": 0,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "ShootRing"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "IntakeRing1",
+      "waypointRelativePos": 0.65,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "StartIntake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "StopIntakeRing1",
+      "waypointRelativePos": 1.4500000000000002,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "StopIntake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ShootRing2",
+      "waypointRelativePos": 2.0,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "ShootRing"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "IntakeRing2",
+      "waypointRelativePos": 2.65,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "StartIntake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "StopIntakeRing2",
+      "waypointRelativePos": 3.4,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "StopIntake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ShootRing2",
+      "waypointRelativePos": 3.95,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "ShootRing"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "IntakeRing3",
+      "waypointRelativePos": 4.3,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "StartIntake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "StopIntakeRing3",
+      "waypointRelativePos": 4.75,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "StopIntake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ShootRing3",
+      "waypointRelativePos": 5.050000000000001,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "ShootRing"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "IntakeRing4",
+      "waypointRelativePos": 5.8,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "StartIntake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "StopIntakeRing4",
+      "waypointRelativePos": 6.2,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "StopIntake"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "ShootRing4",
+      "waypointRelativePos": 7.0,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "ShootRing"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "IntakeRing5",
+      "waypointRelativePos": 8.549999999999999,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "StartIntake"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 3.0,
+    "maxAcceleration": 3.0,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 180.0,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": null,
+  "previewStartingState": {
+    "rotation": 179.6,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

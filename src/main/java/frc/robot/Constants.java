@@ -72,7 +72,7 @@ public final class Constants {
         public static final double angleKD = chosenModule.angleKD;
 
         /* Drive Motor PID Values */
-        public static final double driveKP = 3.0; //NOTE: This must be tuned to specific robot
+        public static final double driveKP = 3.1; //NOTE: This must be tuned to specific robot
         public static final double driveKI = 0.0;
         public static final double driveKD = 0.0;
         public static final double driveKF = 0.0;
@@ -163,7 +163,7 @@ public final class Constants {
 
         public static final HolonomicPathFollowerConfig pathFollowerConfig = new HolonomicPathFollowerConfig(
             new PIDConstants(driveKP, 0, 0), // Translation constants 
-            new PIDConstants(16.0/*chosenModule.angleKP*/, 0, 0), // Rotation constants 
+            new PIDConstants(1.5/*chosenModule.angleKP*/, 0, 0), // Rotation constants 
             maxSpeed, 
             0.56569, // Drive base radius (distance from center to furthest module) I put it in meters
             new ReplanningConfig()
