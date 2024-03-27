@@ -38,24 +38,38 @@ public class RobotContainer {
 
     // Auto Configurations
 
-    NamedCommands.registerCommand("StopIntake", new InstantCommand(() -> SmartDashboard.putString("AutonEvent", "StopIntake")));
-    NamedCommands.registerCommand("StartIntake", new InstantCommand(() -> SmartDashboard.putString("AutonEvent", "StartIntake")));
-    NamedCommands.registerCommand("ShootRing", new InstantCommand(() -> SmartDashboard.putString("AutonEvent", "ShootRing")));
-    //SmartDashboard("ExampleAuto", new PathPlannerAuto("ExampleAuto"));
+    NamedCommands.registerCommand(
+      "ShootRing",
+      new InstantCommand(() -> SmartDashboard.putString("Auton Command", "ShootRing"))
+    );
+    NamedCommands.registerCommand(
+      "StartIntake",
+      new InstantCommand(() -> SmartDashboard.putString("Auton Command", "StartIntake"))
+    );
+    NamedCommands.registerCommand(
+      "StopIntake",
+      new InstantCommand(() -> SmartDashboard.putString("Auton Command", "StopIntake"))
+    );
+
     autoChooser = AutoBuilder.buildAutoChooser();
 
-    autoChooser.setDefaultOption(
-      "ExampleAuto",
-      new InstantCommand(() -> s_Swerve.setPose(new Pose2d(2.00, 7.00, new Rotation2d(Units.degreesToRadians(0)))))
-        .andThen(new PathPlannerAuto("ExampleAuto"))
-    );
+    autoChooser.setDefaultOption("ExampleAuto", generateAuton("ExampleAuto"));
 
     SmartDashboard.putData("Auto Chooser", autoChooser);
 
     autoChooser.addOption("S1_FR1_BR1_BR2", generateAuton("S1_FR1_BR1_BR2"));
-    autoChooser.addOption("S2_FR2_FR1_FR1_BR1_BR2", generateAuton("S2_FR2_FR1_FR1_BR1_BR2"));
-    autoChooser.addOption("S2_FR2_FR3_FR1_BR1", generateAuton("S2_FR2_FR3_FR1_BR1"));
-    autoChooser.addOption("S2_FR2_FR3_FR1_BR1_BR2", generateAuton("S2_FR2_FR3_FR1_BR1_BR2"));
+    autoChooser.addOption(
+      "S2_FR2_FR1_FR1_BR1_BR2",
+      generateAuton("S2_FR2_FR1_FR1_BR1_BR2")
+    );
+    autoChooser.addOption(
+      "S2_FR2_FR3_FR1_BR1",
+      generateAuton("S2_FR2_FR3_FR1_BR1")
+    );
+    autoChooser.addOption(
+      "S2_FR2_FR3_FR1_BR1_BR2",
+      generateAuton("S2_FR2_FR3_FR1_BR1_BR2")
+    );
     autoChooser.addOption("S3", generateAuton("S3"));
     autoChooser.addOption("S3_BR5_BR4", generateAuton("S3_BR5_BR4"));
   }
@@ -77,29 +91,46 @@ public class RobotContainer {
     return autoChooser.getSelected();
   }
 
-  public Command generateAuton(String autonName){
+  public Command generateAuton(String autonName) {
     Pose2d startingPose;
     Character startingNum = autonName.charAt(1);
 
     switch (startingNum) {
-        case '1':
-            startingPose = new Pose2d(0.66, 6.73, new Rotation2d(Units.degreesToRadians(-116.81)));
-            break;
-
-        case '2':
-            startingPose = new Pose2d(1.36, 5.54, new Rotation2d(Units.degreesToRadians(179.60)));
-            break;
-
-        case '3':
-            startingPose = new Pose2d(0.67, 4.39, new Rotation2d(Units.degreesToRadians(120.07)));
-            break;
-    
-        default:
-            startingPose = new Pose2d();
-            break;
+      case '1':
+        startingPose =
+          new Pose2d(
+            0.66,
+            6.73,
+            new Rotation2d(Units.degreesToRadians(-116.81))
+          );
+        break;
+      case '2':
+        startingPose =
+          new Pose2d(
+            1.36,
+            5.54,
+            new Rotation2d(Units.degreesToRadians(179.60))
+          );
+        break;
+      case '3':
+        startingPose =
+          new Pose2d(
+            0.67,
+            4.39,
+            new Rotation2d(Units.degreesToRadians(120.07))
+          );
+        break;
+      default:
+        startingPose =
+          new Pose2d(
+            1.36,
+            5.54,
+            new Rotation2d(Units.degreesToRadians(179.60))
+          );
+        break;
     }
 
     return new InstantCommand(() -> s_Swerve.setPose(startingPose))
-        .andThen(new PathPlannerAuto("ExampleAuto"));
+      .andThen(new PathPlannerAuto(autonName));
   }
 }
